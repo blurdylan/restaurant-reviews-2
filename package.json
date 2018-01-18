@@ -1,0 +1,50 @@
+{
+  "name": "restaurant-reviews",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Udacity MWS Project 2",
+  "keywords": [],
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "concurrently": "^3.5.1",
+    "gulp-gzip": "^1.4.1",
+    "http-server": "^0.11.1",
+    "include-all": "^1.0.0",
+    "pump": "^2.0.0",
+    "rc": "1.0.1",
+    "sails": "^0.12.13",
+    "sails-disk": "~0.10.9",
+    "uglify-js": "^3.3.7"
+  },
+  "scripts": {
+    "debug": "node debug app.js",
+    "start": "node app.js",
+    "serve": "npm-run-all -p server app",
+    "server": "node server",
+    "app": "http-server ./src -p 8000",
+    "clean": "gulp compress minify-css"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brandy/Restaurant-Reviews.git"
+  },
+  "author": "Brandy Lee Camacho",
+  "linkedIn": "https://www.linkedin.com/in/brandycamacho/",
+  "email": "brandy@udacity.com",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-minify": "^0.2.0",
+    "gulp": "latest",
+    "gulp-babel": "^7.0.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-coffee": "latest",
+    "gulp-concat": "latest",
+    "gulp-connect": "latest",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest",
+    "npm-run-all": "^4.1.2"
+  }
+}
