@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="theme-color" content="#222">
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+
+
+  <link rel="manifest" href="manifest.webmanifest">
+
+
+  <!-- Helping Libraires -->
+  <script async src="js/lazyload.js"></script>
+  <script src="js/dexie.js"></script>
+  <title>Restaurant Reviews</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1>
+        <a href="/">Restaurant Reviews</a>
+      </h1>
+    </nav>
+  </header>
+
+  <main id="maincontent">
+    <section id="map-container">
+      <div role="application" aria-hidden="true" id="map"></div>
+    </section>
+    <section>
+      <div class="filter-options">
+        <h2>FILTERS</h2>
+        <div class="row selects">
+          <select aria-label="neighborhood select" class="resrev-half" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+            <option value="all">All Neighborhoods</option>
+          </select>
+          <select aria-label="cuisines select" class="resrev-half" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+            <option value="all">All Cuisines</option>
+          </select>
+        </div>
+      </div>
+      <div class="table">
+        <ul id="restaurants-list" class="row"></ul>
+      </div>
+    </section>
+
+    <!-- JS Libraires -->
+    <script src="js/main.js"></script>
+    <script src="js/dbhelper.js"></script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.30&key=AIzaSyBnF2HiWDQqIGB6NXly6J75dvfKEXjYs8w&libraries=places&callback=initMap"></script>
+
+
+  </main>
+
+  <footer id="footer">
+    Copyright (c) 2017
+    <a href="/">
+      <strong>Restaurant Reviews</strong>
+    </a> All Rights Reserved.
+  </footer>
+
+</body>
+<link rel="stylesheet" href="css/dist/styles.css" type="text/css">
+<link rel="stylesheet" href="css/dist/responsive.css" type="text/css" />
+
+</html>
