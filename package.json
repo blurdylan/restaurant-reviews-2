@@ -37,6 +37,7 @@
     "babel-preset-minify": "^0.2.0",
     "gulp": "latest",
     "gulp-babel": "^7.0.0",
+    "gulp-babel-minify": "^0.2.0",
     "gulp-clean-css": "^3.9.2",
     "gulp-coffee": "latest",
     "gulp-concat": "latest",

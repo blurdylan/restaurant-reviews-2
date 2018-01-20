@@ -73,7 +73,7 @@ section {
 nav {
   width: 100%;
   height: 80px;
-  background: linear-gradient(135deg, #0b0b0b 0%, #65112c 100%);
+  background: #5d1029;
   text-align: center;
 }
 nav h1 {
@@ -121,7 +121,7 @@ nav h1 a {
 }
 /* ====================== Map ====================== */
 #map {
-  height: 400px;
+  height: 255px;
   width: 100%;
   background-color: #ccc;
 }
@@ -129,7 +129,7 @@ nav h1 a {
 .filter-options {
   text-align: center;
   width: 100%;
-  background: linear-gradient(135deg, #c56cd6 0%, #3425af 100%);
+  background: #210c13;
   align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -218,7 +218,7 @@ nav h1 a {
   font-size: 10pt;
 }
 #restaurants-list li a {
-  background: linear-gradient(135deg, #c56cd6 0%, #3425af 100%);
+  background-color: #210c13;
   color: #fff;
   display: inline-block;
   font-size: 10pt;
@@ -230,10 +230,6 @@ nav h1 a {
   text-decoration: none;
   text-transform: uppercase;
   transition: background 500ms;
-}
-
-#restaurants-list li a:hover {
-  background: linear-gradient(135deg, #f2d50f 0%, #da0641 100%);
 }
 
 /* ====================== Restaurant Details ====================== */
@@ -330,7 +326,7 @@ nav h1 a {
   margin: 0 0 10px;
 }
 .review-comments {
-  background: linear-gradient(135deg, #c56cd6 0%, #3425af 100%);
+  background: #210c13;
   border-radius: 0 0 20px 20px;
   padding: 15px;
   color: white;
@@ -363,4 +359,14 @@ nav h1 a {
 }
 .breadcrumb {
   height: 50px;
+}
+.first-show {
+  background-color: #01447e !important;
+}
+
+.first-show > p {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 60px;
+  color: white;
 }

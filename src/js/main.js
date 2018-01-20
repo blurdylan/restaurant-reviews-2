@@ -6,6 +6,7 @@ var markers = [];
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener("DOMContentLoaded", event => {
+  fillRestaurantsHTML();
   fetchNeighborhoods();
   fetchCuisines();
 
@@ -93,21 +94,36 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
   });
 };
 
+window.waitMap = () => {
+  const map = document.getElementById("map");
+  map.className = "first-show";
+  const info = document.createElement("p");
+  info.innerHTML = "Tap here to show restaurant map";
+  map.appendChild(info);
+
+  map.onclick = () => {
+    initMap();
+  };
+
+  updateRestaurants();
+};
+
 /**
  * Initialize Google map, called from HTML.
  */
-window.initMap = () => {
+initMap = () => {
+  const gmap = document.getElementById("map");
+  gmap.onclick = null;
+  updateRestaurants();
   let loc = {
     lat: 40.722216,
     lng: -73.987501
   };
   self.map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 12,
+    zoom: 11,
     center: loc,
     scrollwheel: false
-    // Map Styles
   });
-  updateRestaurants();
 };
 
 /**
@@ -172,8 +188,9 @@ createRestaurantHTML = restaurant => {
   li.className = "resrev-quarter";
 
   const image = document.createElement("img");
-  image.className = "restaurant-img lazyload";
-  // Image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.className = "restaurant-img b-lazy";
+  image.src =
+    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
   image.setAttribute("alt", `Restaurant ${restaurant.name}`);
   image.setAttribute("data-src", DBHelper.imageUrlForRestaurant(restaurant));
   li.append(image);
@@ -197,8 +214,8 @@ createRestaurantHTML = restaurant => {
 
   // Lazy load the images
   setTimeout(() => {
-    lazyload();
-  }, 500);
+    Blazy();
+  }, 0);
 
   return li;
 };

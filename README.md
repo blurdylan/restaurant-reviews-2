@@ -2,6 +2,7 @@
 
 ## Getting Started
 
+1. While being inside the parent folder
 1. Run `npm i` to install dependencies
 1. Run `npm run server` to start the backend server
 1. Wait for the server to start
