@@ -4,9 +4,8 @@
 
 1. While being inside the parent folder
 1. Run `npm i` to install dependencies
-1. Run `npm run server` to start the backend server
-1. Wait for the server to start
-1. Run `npm run app`.
+1. Run `npm run serve` to start the app and the backend server
+1. Wait for the server to start before launching the link below
 
    Then open http://localhost:8000 to start the app.
 
